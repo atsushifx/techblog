@@ -5,7 +5,7 @@ description = "ふふ…小紅が見守るブログです♡"
 default_language = "ja"
 
 # blog theme
-theme = "even"
+theme = "abridge"
 
 taxonomies = [
   { name = "categories" },

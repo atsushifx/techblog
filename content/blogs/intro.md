@@ -1,10 +1,10 @@
----
-title: "TechBlog はじめました"
-date: 2025-04-04
-draft: true
-categories: ["blog"]
-tags: ["techblog", "introduction", "profile", "自己紹介", ]
----
++++
+title = "TechBlog はじめました"
+date = 2025-04-04
+draft = true
+categories =["blog"]
+tags =["techblog", "introduction", "profile", "自己紹介"]
++++
 
 ## TechBlog はじめました
 
