@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>{{ config.title }}</title>
+	<meta name="description" content="{{ config.description }}">
+	<link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+</head>
+
+<body>
+
+	<header>
+		<h1>{{ config.title }}</h1>
+		<nav>
+			<a href="/">ホーム</a>
+			<a href="/blog/">Blog一覧</a>
+		</nav>
+	</header>
+
+	<main>
+		<section class="intro">
+			{{ section.content | safe }}
+		</section>
+
+		<section class="articles">
+			{% for page in paginator.pages %}
+			<article>
+				<h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+				<p>{{ page.summary | safe }}</p>
+				<small>{{ page.date | date(format="%Y-%m-%d") }}</small>
+			</article>
+			{% endfor %}
+
+			{% if paginator.number_pagers > 1 %}
+			<nav class="pagination">
+				{% if paginator.previous %}
+				<a href="{{ paginator.previous }}">← 前のページ</a>
+				{% endif %}
+				{% if paginator.next %}
+				<a href="{{ paginator.next }}">次のページ →</a>
+				{% endif %}
+			</nav>
+			{% endif %}
+		</section>
+	</main>
+
+	<footer>
+		<p>© {{ config.title }} powered by Zola + 小紅</p>
+	</footer>
+
+</body>
+
+</html>

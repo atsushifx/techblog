@@ -3,6 +3,8 @@ base_url = "https://atsushifx.github.io/techbloh/"
 title =" atsushifxのてくろぐ"
 description = "ふふ…小紅が見守るブログです♡"
 default_language = "ja"
+
+# blog theme
 theme = "even"
 
 taxonomies = [

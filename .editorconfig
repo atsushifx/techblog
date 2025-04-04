@@ -1,6 +1,6 @@
+## @(#) : editorconfig common template for atsushifx
+##
 ## EditorConfig is awesome: https://EditorConfig.org
-#
-# @(#) : zenn.dev articles repository
 #
 # @version  1.0.0
 # @date		2025-01-31
@@ -49,8 +49,8 @@ indent_style = space
 
 ### Settings
 # json
-[**.{json*}]
-tab_width = 4
+[**.json]
+tab_width = 2
 indent_size = tab
 indent_style = tab
 
@@ -62,9 +62,9 @@ indent_style = space
 
 # ini, toml
 [**.{ini,toml}]
-indent_style = tab
-indent_size = tab
-tab_width = 4
+indent_style = space
+indent_size = 2
+tab_width = 2
 
 # rc files
 [**rc]
@@ -75,9 +75,13 @@ tab_width = 2
 ### Shell Scripts
 # shell script
 [**.{sh,bash,zsh}]
+
+# powershell script
+[**.ps1]
 indent_style = space
-indent_size = 2
-tab_width = 2
+indent_size = 4
+tab_width = 4
+
 
 ### Git config
 # for git config
