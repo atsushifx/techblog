@@ -1,0 +1,23 @@
+# The URL the site will be built for
+base_url = "https://atsushifx.github.io/techbloh/"
+title =" atsushifxのてくろぐ"
+description = "ふふ…小紅が見守るブログです♡"
+default_language = "ja"
+theme = "even"
+
+taxonomies = [
+  { name = "categories" },
+  { name = "tags" }
+]
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+highlight_code = true
+
+[extra]
+# Put all your custom variables here
