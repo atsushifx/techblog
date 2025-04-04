@@ -34,4 +34,4 @@ commit-msg:
   parallel: true
   commands:
     commitlint:
-      run: pnpm exec commitlint -e
+      run: commitlint -e
