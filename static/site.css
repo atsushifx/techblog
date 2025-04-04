@@ -1,0 +1,33 @@
+/**
+ * Copyright (c) 2025 Furukawa Atsushi <atsushifx@gmail.com>
+ *
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+
+.section-container {
+	padding: 2rem;
+}
+
+.posts-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.post-card {
+	background-color: #fff;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-date {
+	font-size: 0.9rem;
+	color: #999;
+}
+
+.read-more {
+	color: #007acc;
+	text-decoration: none;
+}
