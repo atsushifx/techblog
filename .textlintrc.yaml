@@ -6,7 +6,11 @@ filters:
       - .textlint/allowlist.yml
 rules:
   preset-ja-technical-writing:
-    sentence-length: 120
+    sentence-length:
+      max: 120
+      skipPatterns: [
+        "+++",
+      ]
     max-kanji-continuous-len:
       max: 8
       allow: []
@@ -16,7 +20,7 @@ rules:
       allowPeriodMarks:
         - "、"
         - ":"
-        -"+"
+        - "+"
         - "♡"
     no-exclamation-question-mark: false
     no-doubled-joshi:
