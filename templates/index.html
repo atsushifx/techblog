@@ -23,32 +23,18 @@
 			{{ section.content | safe }}
 		</section>
 
-		<section class="articles">
-			{% for page in paginator.pages %}
-			<article>
-				<h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-				<p>{{ page.summary | safe }}</p>
-				<small>{{ page.date | date(format="%Y-%m-%d") }}</small>
-			</article>
-			{% endfor %}
+		{# blogs/ セクションから最近の記事を取得 #}
+		{% set blog_section = get_section(path="blogs/_index.md") %}
+		{% set recent_posts = blog_section.pages | sort(attribute="date", order="desc") | slice(end=config.extra.recent_posts_limit | default(value=5)) %}
 
-			{% if paginator.number_pagers > 1 %}
-			<nav class="pagination">
-				{% if paginator.previous %}
-				<a href="{{ paginator.previous }}">← 前のﾍﾟyｰ[ｼﾞW</a>
-				{% endif %}
-				{% if paginator.next %}
-				<a href="{{ paginator.next }}">次のﾍﾟyｰ[ｼﾞW →</a>
-				{% endif %}
-			</nav>
-			{% endif %}
+		<section class="recent-posts">
+			<h2>📰 新着記事（blogs/ 配下）</h2>
+			{% include "partials/recent_posts.html" %}
 		</section>
 	</main>
 
 	<footer>
-		<p>© {{ config.title }} powered by Zola + 小紅</p>
+		<p>© {{ config.title }} powered by Zola + 小紅&amp;つむぎ</p>
 	</footer>
-
 </body>
-
 </html>

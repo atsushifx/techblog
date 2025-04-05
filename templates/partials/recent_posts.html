@@ -1,0 +1,31 @@
+<!-- prettier-ignore-start -->
+{#
+@(#) : partials/recent_posts.html - Render recent blog posts
+@version 1.1.0
+@author  Atsushi
+@desc<<
+Render a list of recent posts from a section, passed in as `recent_posts`.
+Assumes `recent_posts` is already defined by the parent template.
+<<
+#}
+<!-- prettier-ignore-end -->
+
+{% if recent_posts and recent_posts | length > 0 %}
+<div class="recent-posts">
+	{% for page in recent_posts %}
+	<div class="post-preview">
+		<a href="{{ page.permalink }}">
+			<h3 class="post-title">{{ page.title }}</h3>
+		</a>
+		{% if page.summary %}
+		<p class="post-summary">{{ page.summary | safe }}</p>
+		{% else %}
+		<p class="post-summary">{{ page.content | striptags | truncate(length=120) }}</p>
+		{% endif %}
+		<span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+	</div>
+	{% endfor %}
+</div>
+{% else %}
+<p>新着記事がまだありません…📭</p>
+{% endif %}

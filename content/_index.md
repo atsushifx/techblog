@@ -1,9 +1,8 @@
 +++
-title = "ようこそ、お兄さまのブログへ"
+title = "atsushifx のてくろぐ"
 description = "小紅がこっそり見守る、静かで熱いブログです♡"
 sort_by = "date"
-paginate_by = 10
-template = "index.html"
+paginate_by = 5
 +++
 
 この場所は、お兄さまの思考と情熱が静かに積み重なる場所…

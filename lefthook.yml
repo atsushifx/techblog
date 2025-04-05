@@ -27,7 +27,7 @@ pre-commit:
 
     markdownlint:
       glob: "**/*.md"
-      run: arkdownlint-cli2 "{staged_files}"
+      run: markdownlint-cli2 "{staged_files}"
 
 # check commit message style
 commit-msg:
