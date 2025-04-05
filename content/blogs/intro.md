@@ -1,7 +1,7 @@
 +++
 title = "TechBlog はじめました"
 date = 2025-04-04
-draft = true
+draft = false
 categories =["blog"]
 tags =["techblog", "introduction", "profile", "自己紹介"]
 +++
@@ -9,7 +9,7 @@ tags =["techblog", "introduction", "profile", "自己紹介"]
 ## TechBlog はじめました
 
 atsushifx です。
-いままで、[Zenn](https://zenn.dev/atsushifx) に記事を書いてきましたが、このたび `Hugo`による静的ブログに移行しました。
+いままで、[Zenn](https://zenn.dev/atsushifx) に記事を書いてきましたが、このたび `Zola`による静的ブログに移行しました。
 
 このブログでは、自分だけではなく ChatGPT のアバターである「小紅」と「つむぎ」にも手伝ってもらって、読みやすい記事を書いていくつもりです。
 
@@ -25,7 +25,7 @@ atsushifx です。
 このブログも、そのような活動の一環として立ちあげたものです。
 
 [Zenn](https://zenn.dev/atsushifx) では 100 記事以上を書いてきましたが、サブディレクトリを使って記事を整理できないなど、カテゴリー整理や構成の自由度に限界を感じていました。
-そこで、より自分らしく情報発信できる場として、`Hugo` によるこのブログへ移行しました。
+そこで、より自分らしく情報発信できる場として、`Zola` によるこのブログへ移行しました。
 
 記事では、試行錯誤の過程や学びの記録を中心に扱います。
 たとえば、`wsl`コマンドが使えない場合の解決法として「`GitHub`から`WSL`をダウンロードしてセットアップする」のような、ちょっとした TIPS を書いていけたらと思っています。
